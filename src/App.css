@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.text {
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: -90px;
+  margin-bottom: 50px;
+  background-color: #448b3db6;
+  width: 20%;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 24px;
+}
+
+.text:hover{  
+  transform: scale(120%);
+  transition: 0.5s;
+  color: rgb(66, 66, 66);
+
+}

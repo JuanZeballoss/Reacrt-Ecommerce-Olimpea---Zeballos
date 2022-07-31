@@ -1,35 +1,8 @@
 *{
     padding: 0px;
     margin: 0px;
-
 }
 
-.lista{       
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 20px;
-    color: aliceblue; 
-}
-
-ul.menu li{
-    margin: auto;
-    padding: 2.1%;
-    text-decoration: none;
-    list-style-type: none;
-    display: inline-block;
-    padding-right: 7em ;
-    background-color: rgb(99, 114, 114);
-    height: 30px;  
-    justify-content: space-between;
-}
-
-.lista:hover {
-    color: yellow;
-    transform: scale(120%);
-    transition: .5s;
-}
-
-.titulo{
-    text-align: center;
-    text-transform: uppercase;
+.card{
+    width: 18rem;
 }
