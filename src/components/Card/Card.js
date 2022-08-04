@@ -1,4 +1,5 @@
 import "./Card.css"
+import ItemCount from "../ItemCount";
 
 function Card ({img, name, description, stock, price}) {
 
@@ -15,7 +16,7 @@ return (
         <li className="list-group-item"></li>
       </ul>  
       <div className="card-body">
-        <a href="#" className="card-link-comprar">Comprar</a>        
+        <ItemCount initial={1} stock={5}/>       
       </div>
     </div>)
 }

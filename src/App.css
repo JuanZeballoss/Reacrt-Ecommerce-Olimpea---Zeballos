@@ -56,3 +56,25 @@
   color: rgb(66, 66, 66);
 
 }
+
+.symbolMas {
+  background-color: #00ff6a95;
+  position: absolute;
+  display: flex;
+  border-radius: 5px;
+  font-size: 25px;
+  text-align: center;
+  width: 10%;
+  right: 20px;
+  justify-content: center;
+}
+
+.symbolMenos {
+  background-color: rgba(255, 0, 0, 0.627);
+  position: absolute;
+  display: flex;
+  justify-content: center;  
+  border-radius: 5px;
+  font-size: 25px;
+  width: 10%;
+}
