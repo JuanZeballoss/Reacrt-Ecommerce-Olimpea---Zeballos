@@ -5,10 +5,10 @@ function ItemCount ({initial, stock}) {
     const [clicks, setClicks] = useState(1)
 
     const sumar = () => {         
-        clicks == stock ? alert("No puedes agregar mas productos") : setClicks(clicks+1);} 
+        clicks === stock ? alert("No puedes agregar mas productos") : setClicks(clicks+1);} 
     
     const restar = () => {        
-        clicks == initial ? alert("No puedes seleccionar menos de 1") : setClicks(clicks-1);
+        clicks === initial ? alert("No puedes seleccionar menos de 1") : setClicks(clicks-1);
         }    
 
     return (
