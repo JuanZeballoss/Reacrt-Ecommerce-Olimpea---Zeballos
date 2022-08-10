@@ -58,7 +58,7 @@
 }
 
 .symbolMas {
-  background-color: #00ff6a95;
+  background-color: #c4c4c495;
   position: absolute;
   display: flex;
   border-radius: 5px;
@@ -70,11 +70,48 @@
 }
 
 .symbolMenos {
-  background-color: rgba(255, 0, 0, 0.627);
+  background-color: rgb(198, 198, 198);
   position: absolute;
+  left: 20px;
   display: flex;
   justify-content: center;  
   border-radius: 5px;
   font-size: 25px;
   width: 10%;
+}
+
+.symbolMas:hover{
+  color: white;
+  background-color: rgb(108, 139, 60);
+  transition: 0.5s;
+}
+
+.symbolMenos:hover{
+  color: white;
+  background-color: rgb(139, 60, 60);
+  transition: 0.5s;
+}
+
+.buttonVerMas {
+  border-radius: 10px;
+  width: 70%;
+  height: auto;
+  background-color: lightblue;
+  font-size: 20px;
+}
+
+.buttonVerMas:hover {
+  transform: scale(105%);
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+}
+
+.addToCart{
+  background-color: rgba(0, 0, 0, 0.228);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }

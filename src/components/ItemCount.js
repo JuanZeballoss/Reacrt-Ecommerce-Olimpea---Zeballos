@@ -13,10 +13,11 @@ function ItemCount ({initial, stock}) {
 
     return (
         <>
-            <h4>AGREGAR AL CARRITO</h4>            
+            <div className="addToCart">        
             <button  className="symbolMenos" onClick= {restar} >-</button>
             <button  className="symbolMas" onClick= {sumar} >+</button>
             <h3>Cantidad: {clicks}</h3>
+            </div>
         </>
     )
     }

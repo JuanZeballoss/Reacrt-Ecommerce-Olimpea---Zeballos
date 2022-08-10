@@ -1,6 +1,7 @@
-import Item from "./Item"
+import "../components/Item/Item.css"
 import React, { useEffect, useState } from "react";
-import stockProducts from "../Data/Data"
+import stockProducts from "../components/Data/Data"
+import ItemListDetail from "./ItemListDetail"
 
 function getProductos() {
     return new Promise((resolve) => {
@@ -8,7 +9,7 @@ function getProductos() {
     });
   }
   
-  function ItemList () {
+  function ItemDetail () {
     const [data, setData] = useState([]);
   
     useEffect(() => {
@@ -17,18 +18,21 @@ function getProductos() {
       });
     }, []);
 
-
     return (
         <div>
             {data.map((movie) => {
                 return (                    
-                        <Item
+                        <ItemListDetail
                             key={movie.id}
                             title={movie.title}                        
                             category={movie.category}                        
                             img={movie.img}
-                            stock={movie.stock}
-                            price={movie.price}
+                            outDate={movie.outDate}
+                            country={movie.country}
+                            description={movie.description}
+                            duration={movie.duration}
+                            principalActor={movie.principalActor}
+                            secondaryActor={movie.secondaryActor}                         
                         />                      
                )
             })
@@ -36,5 +40,5 @@ function getProductos() {
         </div>
     )
 }
-  
-export default ItemList;
+
+export default ItemDetail;
