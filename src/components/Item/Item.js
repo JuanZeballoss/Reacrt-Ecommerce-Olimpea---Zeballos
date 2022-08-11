@@ -1,4 +1,4 @@
-import ItemCount from "../ItemCount";
+import ItemCount from "../ItemCount/ItemCount";
 import "./Item.css"
 
 function Item({ img, title, category, stock, price}) {

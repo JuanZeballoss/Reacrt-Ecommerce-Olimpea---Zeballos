@@ -1,6 +1,6 @@
 import "./NavBar.css";
-import carritoImg from "./CartWidget/shopping-cart.svg";
-import CartWidget from "./CartWidget/CartWidget"
+import carritoImg from "../CartWidget/shopping-cart.svg";
+import CartWidget from "../CartWidget/CartWidget"
 
 function NavBar ()  {
     return(

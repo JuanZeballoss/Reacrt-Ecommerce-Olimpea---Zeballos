@@ -1,18 +1,12 @@
-import Item from "./Item"
+import Item from "../Item/Item"
 import React, { useEffect, useState } from "react";
-import stockProducts from "../Data/Data"
+import getProdId from "../Helpers/getProductos"
 
-function getProductos() {
-    return new Promise((resolve) => {
-      setTimeout(() => resolve(stockProducts), 2000)
-    });
-  }
-  
   function ItemList () {
     const [data, setData] = useState([]);
   
     useEffect(() => {
-      getProductos().then((respuesta) => {
+      getProdId().then((respuesta) => {
         setData(respuesta);
       });
     }, []);
