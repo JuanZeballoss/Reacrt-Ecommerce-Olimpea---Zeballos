@@ -21,7 +21,5 @@ return (
       </div>
       
     </div>)
-
 }
-
 export default ItemListDetail;

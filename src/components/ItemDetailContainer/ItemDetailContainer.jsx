@@ -1,20 +1,20 @@
 import React, {useEffect, useState} from "react";
 import ItemDetail from "./ItemDetail"
-import getProductos from "../Helpers/getProductos";
+import getProductosId from "../Helpers/getProductosId";
 
-const ItemDetailContainer = ({id}) => {
-  const[data, setData] = useState([id]);
+function ItemDetailContainer ({id}) {
+  const [data, setData] = useState([id]);
 
   useEffect(() => {
-  getProductos(data, setData);
-  console.log(data);
-}, ([])
-);
-  
+    getProductosId(id).then((respuesta) => {
+      setData(respuesta);
+    });
+  }, []);
+
   return (
     <div>
       <h2>Este es nuestro producto mas vendido</h2>
-      <ItemDetail item={id} />
+      <ItemDetail item={data} />
     </div>
   )
 }

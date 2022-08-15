@@ -1,16 +1,15 @@
 import Item from "../Item/Item"
 import React, { useEffect, useState } from "react";
-import getProdId from "../Helpers/getProductos"
+import getProductos from "../Helpers/getProductos"
 
   function ItemList () {
     const [data, setData] = useState([]);
   
     useEffect(() => {
-      getProdId().then((respuesta) => {
+      getProductos().then((respuesta) => {
         setData(respuesta);
       });
     }, []);
-
 
     return (
         <div>
