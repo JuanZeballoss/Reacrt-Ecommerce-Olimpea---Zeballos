@@ -1,5 +1,4 @@
 import "../Item/Item.css"
-import React, { useEffect, useState } from "react";
 import ItemListDetail from "./ItemListDetail"
   
   function ItemDetail ({item}) {

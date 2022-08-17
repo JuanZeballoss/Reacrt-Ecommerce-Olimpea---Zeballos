@@ -1,12 +1,14 @@
 import React, {useEffect, useState} from "react";
 import ItemDetail from "./ItemDetail"
-import getProductosId from "../Helpers/getProductosId";
+import getProductos from "../Helpers/getProductos";
+import { useParams } from "react-router-dom"
 
-function ItemDetailContainer ({id}) {
-  const [data, setData] = useState([id]);
+function ItemDetailContainer () {
+  const idURL = useParams().id;
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    getProductosId(id).then((respuesta) => {
+    getProductos(idURL).then((respuesta) => {
       setData(respuesta);
     });
   }, []);

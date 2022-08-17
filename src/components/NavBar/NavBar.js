@@ -25,8 +25,8 @@ function NavBar ()  {
                   Productos
                 </Link>
                 <ul className="dropdown-menu">
-                  <li><Link className="dropdown-item" to="/detalle">Maquillaje</Link></li>
-                  <li><Link className="dropdown-item" to="#">SkinCare</Link></li>
+                  <li><Link className="dropdown-item" to="/detalle/1">Maquillaje</Link></li>
+                  <li><Link className="dropdown-item" to="/detalle/2">SkinCare</Link></li>
                   <li><hr className="dropdown-divider"/></li>
                   <li><Link className="dropdown-item" to="#">Anti Age</Link></li>
                 </ul>                

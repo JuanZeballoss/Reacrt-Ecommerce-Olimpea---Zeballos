@@ -1,7 +1,8 @@
 import ItemCount from "../ItemCount/ItemCount";
 import "./Item.css"
+import { Link } from "react-router-dom"
 
-function Item({ img, title, category, stock, price}) {
+function Item({ img, title, category, stock, price, id}) {
 
   return (
     <div className="card">
@@ -14,6 +15,9 @@ function Item({ img, title, category, stock, price}) {
       </div>      
       <div className="card-body">
         <ItemCount initial={1} stock={stock} />
+      </div>
+      <div className="card-body">
+        <Link to={`detalle/${id}`}>Ver Mas</Link>
       </div>
       <button className="buttonVerMas">AGREGAR AL CARRITO</button>
     </div>)
