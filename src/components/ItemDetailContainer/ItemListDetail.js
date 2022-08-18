@@ -1,10 +1,16 @@
 import ItemCount from "../ItemCount/ItemCount"
-
-function handleClicks (count) {
-  console.log("Agregar al carrito", count)
-}
+import { Link } from "react-router-dom"
+import { setState, useState } from "react"
 
 function ItemListDetail ({title, category, outDate, img, principalActor, secondaryActor, duration, description, stock}){
+
+  const [quantityInCart, setInCart] = useState(0)
+
+  function handleClicks (count) {
+    console.log("Agregar al carrito", count)    
+    setInCart(count)
+  }
+
 return (
     <div className="card">
       <img src={img} className="card-img-top" alt="" />
@@ -16,10 +22,13 @@ return (
         <h5 className="card-text">Secundario: {secondaryActor}</h5>
         <h5 className="card-text">Duracion: {duration}</h5>
         <h5 className="card-text">Descipcion breve: {description}</h5>
-        <h5 className="card-text">Stock: {stock}</h5>        
-        <div className="card-body">
+        <h5 className="card-text">Stock: {stock}</h5>  
+        {quantityInCart === 0?      
+        <div className="card-body">          
           <ItemCount initial={1} stock={stock} onAdd={handleClicks} />
         </div>
+        : <Link to="/cart">Ver carrito</Link>
+        }
       </div>
     </div>
   )
