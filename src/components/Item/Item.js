@@ -2,6 +2,10 @@ import ItemCount from "../ItemCount/ItemCount";
 import "./Item.css"
 import { Link } from "react-router-dom"
 
+function handleClicks (count) {
+  console.log("Agregar al carrito", count)
+}
+
 function Item({ img, title, category, stock, price, id}) {
 
   return (
@@ -14,12 +18,11 @@ function Item({ img, title, category, stock, price, id}) {
         <h4 className="card-text">Precio: ${price}</h4>  
       </div>      
       <div className="card-body">
-        <ItemCount initial={1} stock={stock} />
+        <ItemCount initial={1} stock={stock} onAdd={handleClicks} />
       </div>
       <div className="card-body">
-        <Link to={`detalle/${id}`}>Ver Mas</Link>
-      </div>
-      <button className="buttonVerMas">AGREGAR AL CARRITO</button>
+        <Link to={`detalle/${id}`} className="verMas" >Ver Mas</Link>
+      </div>      
     </div>)
 }
 export default Item;

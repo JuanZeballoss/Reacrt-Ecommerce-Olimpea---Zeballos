@@ -8,11 +8,11 @@ function getProductos (idURL) {
                     const devolver = stockProducts.find((prod) => prod.id ===+ idURL)
                     setTimeout(() => {                        
                     resolve(devolver)
-                    }, 100)
+                    }, 1000)
                 } else {
                     setTimeout(() => {                        
                     resolve(stockProducts)
-                    }, 100)
+                    }, 1000)
                 }               
 
             })} catch (err) {

@@ -1,5 +1,9 @@
 import ItemCount from "../ItemCount/ItemCount"
 
+function handleClicks (count) {
+  console.log("Agregar al carrito", count)
+}
+
 function ItemListDetail ({title, category, outDate, img, principalActor, secondaryActor, duration, description, stock}){
 return (
     <div className="card">
@@ -12,14 +16,12 @@ return (
         <h5 className="card-text">Secundario: {secondaryActor}</h5>
         <h5 className="card-text">Duracion: {duration}</h5>
         <h5 className="card-text">Descipcion breve: {description}</h5>
-        <h5 className="card-text">Stock: {stock}</h5>
-        
+        <h5 className="card-text">Stock: {stock}</h5>        
         <div className="card-body">
-        <ItemCount initial={1} stock={stock} />
+          <ItemCount initial={1} stock={stock} onAdd={handleClicks} />
+        </div>
       </div>
-      <button className="buttonVerMas">AGREGAR AL CARRITO</button>
-      </div>
-      
-    </div>)
-}
+    </div>
+  )
+  }
 export default ItemListDetail;

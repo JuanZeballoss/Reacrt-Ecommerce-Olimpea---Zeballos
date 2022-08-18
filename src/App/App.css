@@ -107,11 +107,4 @@
   transition: 0.5s;
 }
 
-.addToCart{
-  background-color: rgba(0, 0, 0, 0.228);
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-}
+
