@@ -1,13 +1,21 @@
 import Item from "../Item/Item"
 import React, { useEffect, useState } from "react";
-import getProductos from "../Helpers/getProductos"
+import { useParams } from "react-router-dom"
+import getProductos from "../Helpers/getProductos";
+import stockProducts from "../Data/Data";
 
   function ItemList () {
     const [data, setData] = useState([]);
+    const idCategory = useParams().idCategory
   
     useEffect(() => {
       getProductos().then((respuesta) => {
-        setData(respuesta);
+        if (idCategory === undefined){
+        setData(respuesta);}
+        else {
+          let filtrados = respuesta.filter (elemento => elemento.category === idCategory)
+          setData(filtrados)
+        }
       });
     }, []);
 

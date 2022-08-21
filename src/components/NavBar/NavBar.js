@@ -2,13 +2,17 @@ import "./NavBar.css";
 import carritoImg from "../CartWidget/shopping-cart.svg";
 import CartWidget from "../CartWidget/CartWidget"
 import {Link} from "react-router-dom"
+import {useContext} from "react"
+import {userContext} from "../../App/App.js"
 
 function NavBar ()  {
+  const {username} = (useContext(userContext))
     return(
         <>
         <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">Olimpea Ecommerce</Link>
+          <p className="navbar-brand" to="/">{username}</p>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -28,7 +32,9 @@ function NavBar ()  {
                   <li><Link className="dropdown-item" to="/detalle/1">Maquillaje</Link></li>
                   <li><Link className="dropdown-item" to="/detalle/2">SkinCare</Link></li>
                   <li><hr className="dropdown-divider"/></li>
-                  <li><Link className="dropdown-item" to="#">Anti Age</Link></li>
+                  <li><Link className="dropdown-item" to={`/category/Drama`}>Categoria Drama</Link></li>
+                  <li><Link className="dropdown-item" to={`/category/Comedy`}>Categoria Comedy</Link></li>
+                  <li><Link className="dropdown-item" to={`/category/Horror`}>Categoria Horror</Link></li>
                 </ul>                
               </li>              
             </ul>

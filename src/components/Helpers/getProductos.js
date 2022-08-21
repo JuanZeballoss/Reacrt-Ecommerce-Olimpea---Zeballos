@@ -8,13 +8,12 @@ function getProductos (idURL) {
                     const devolver = stockProducts.find((prod) => prod.id ===+ idURL)
                     setTimeout(() => {                        
                     resolve(devolver)
-                    }, 1000)
+                    }, 1000)                    
                 } else {
                     setTimeout(() => {                        
                     resolve(stockProducts)
                     }, 1000)
-                }               
-
+                } 
             })} catch (err) {
                 alert("No hay productos para mostrar")
                 console.log(err)

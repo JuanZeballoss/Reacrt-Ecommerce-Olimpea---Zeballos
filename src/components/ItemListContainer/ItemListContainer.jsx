@@ -1,6 +1,7 @@
 import ItemList from "./ItemList";
 
-const ItemListContainer = () => {
+function ItemListContainer  () {
+  
   return (   
       <div>
       <h2>NUESTROS PRODUCTOS</h2>
