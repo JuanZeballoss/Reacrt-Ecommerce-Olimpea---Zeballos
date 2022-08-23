@@ -3,16 +3,17 @@ import carritoImg from "../CartWidget/shopping-cart.svg";
 import CartWidget from "../CartWidget/CartWidget"
 import {Link} from "react-router-dom"
 import {useContext} from "react"
-import {userContext} from "../../App/App.js"
+import {cartContext} from "../Store/cartContext"
 
 function NavBar ()  {
-  const {username} = (useContext(userContext))
+  const {cart} = (useContext(cartContext))
+
     return(
         <>
         <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">Olimpea Ecommerce</Link>
-          <p className="navbar-brand" to="/">{username}</p>
+          
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -38,7 +39,9 @@ function NavBar ()  {
                 </ul>                
               </li>              
             </ul>
+            <p className="navbar-brand" ></p>
             <form className="d-flex" role="search">              
+            <Link to="/LogIn"  className="btn btn-outline-success" type="submit">Log In</Link>
               <CartWidget imgUrl={carritoImg} />
               
             </form>

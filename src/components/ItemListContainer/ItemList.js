@@ -17,7 +17,7 @@ import stockProducts from "../Data/Data";
           setData(filtrados)
         }
       });
-    }, []);
+    }, [idCategory]);
 
     return (
         <div>

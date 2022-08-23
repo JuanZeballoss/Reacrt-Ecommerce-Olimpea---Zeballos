@@ -6,6 +6,7 @@ import ItemListDetail from "./ItemListDetail"
     return (
         <div>                                 
           <ItemListDetail
+              id={item.id}
               key={item.id}
               title={item.title}                        
               category={item.category}                        

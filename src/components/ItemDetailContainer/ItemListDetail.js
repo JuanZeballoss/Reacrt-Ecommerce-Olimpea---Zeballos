@@ -1,14 +1,17 @@
 import ItemCount from "../ItemCount/ItemCount"
 import { Link } from "react-router-dom"
 import { setState, useState } from "react"
+import {useContext} from "react"
+import { cartContext } from "../Store/cartContext"
 
-function ItemListDetail ({title, category, outDate, img, principalActor, secondaryActor, duration, description, stock}){
-
+function ItemListDetail ({title, category, outDate, img, principalActor, secondaryActor, duration, description, stock, id}){
+  const {addToCart} = useContext(cartContext)
   const [quantityInCart, setInCart] = useState(0)
 
-  function handleClicks (count) {
-    console.log("Agregar al carrito", count)    
-    setInCart(count)
+  function handleClicks (quantity) {
+    const item = {title, category, outDate, img, principalActor, secondaryActor, duration, description, stock, id}
+    addToCart(item, quantity)
+    setInCart(quantity)
   }
 
 return (
@@ -27,7 +30,7 @@ return (
         <div className="card-body">          
           <ItemCount initial={1} stock={stock} onAdd={handleClicks} />
         </div>
-        : <Link to="/cart">Ver carrito</Link>
+        : <Link to={`/cart`}>Ver carrito</Link>
         }
       </div>
     </div>

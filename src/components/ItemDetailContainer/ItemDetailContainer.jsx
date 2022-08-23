@@ -11,7 +11,7 @@ function ItemDetailContainer () {
     getProductos(idURL).then((respuesta) => {
       setData(respuesta);
     });
-  }, []);
+  }, [idURL]);
 
   return (
     <div>
