@@ -13,8 +13,10 @@
   }
 }
 
+
+
 .App-header {
-  background-color: #282c34;
+  background-color: rgb(198, 198, 198);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,7 +27,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  background-color: rgb(198, 198, 198);
 }
 
 @keyframes App-logo-spin {
@@ -43,7 +45,7 @@
   text-transform: uppercase;
   margin-top: -90px;
   margin-bottom: 50px;
-  background-color: #448b3db6;
+  background-color: rgb(198, 198, 198);
   width: 20%;
   cursor: pointer;
   border-radius: 20px;
@@ -58,7 +60,7 @@
 }
 
 .symbolMas {
-  background-color: #c4c4c495;
+  background-color: rgb(198, 198, 198);
   position: absolute;
   display: flex;
   border-radius: 5px;
@@ -93,6 +95,7 @@
 }
 
 .buttonVerMas {
+  text-decoration: none;
   border-radius: 10px;
   width: 70%;
   height: auto;
@@ -102,9 +105,134 @@
 
 .buttonVerMas:hover {
   transform: scale(105%);
-  background-color: black;
+  background-color: rgb(0, 99, 152);
   color: white;
   transition: 0.5s;
 }
 
+.trashCan{
+  height: 30px;
+  cursor: pointer;
+}
 
+.trashCan:hover{
+  transform: scale(110%);
+  transition: 0.3s;
+  color: red;
+}
+
+.clearCart{
+  color: white;
+  font-size: 18px;
+  background-color: rgba(245, 0, 0, 0.648);
+  border-radius: 10px;
+  width: 9%;
+  position: absolute;
+  margin-left:900px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.clearCart:hover{
+  transition: 0.5s;
+  color: rgb(255, 255, 255);
+  background-color: rgb(75, 0, 0);
+}
+
+.verCarrito{
+  font-size: 18px;
+  background-color: rgb(26, 170, 0);
+  border-radius: 10px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin-left: 400px;
+  width: 10%;
+  color: white;
+  border: solid rgb(66, 66, 66); 
+}
+
+.verCarrito:hover{
+  transform: scale(110%);
+  transition: 0.5s;  
+  color: black;
+}
+
+.quantity{
+  color: white;
+  position: absolute;
+  margin-top: -30px;
+  font-size: 16px;
+  margin-left: 40px;
+  text-align: center;
+  background-color: black;
+  width: 2%;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.cart{
+  margin-right: 50px;
+}
+
+.seguirComprando{
+  text-decoration: none;
+  background-color: rgb(0, 17, 128);
+  color: rgb(255, 255, 255);
+  display: flex;
+  width: 50%;
+  margin: auto;
+  margin-top:20px;
+  font-size: 18px;
+  border-radius: 10px;  
+  border-color: white;
+  justify-content: center;
+}
+
+.seguirComprando:hover{
+  color: black;
+  background-color: lightblue;
+  transition: 0.5s;
+}
+
+.seguirComprandoo{
+  text-decoration: none;
+  background-color: rgb(0, 17, 128);
+  color: rgb(255, 255, 255);
+  display: flex;
+  width: 10%;
+  margin: auto;
+  margin-top:20px;
+  font-size: 18px;
+  border-radius: 10px;  
+  border-color: white;
+  justify-content: center;
+}
+
+.seguirComprandoo:hover{
+  color: black;
+  background-color: lightblue;
+  transition: 0.5s;
+}
+
+.verCarritoo{
+  font-size: 18px;
+  background-color: rgb(26, 170, 0);
+  border-radius: 10px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin: auto;  
+  margin-top: 20px;
+  width: 39%;
+  color: white;
+  border: solid rgb(66, 66, 66); 
+}
+
+.verCarritoo:hover{
+  transform: scale(110%);
+  transition: 0.5s;  
+  color: black;
+}

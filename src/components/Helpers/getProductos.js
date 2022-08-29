@@ -1,6 +1,5 @@
 import stockProducts from "../Data/Data"
 
-
 function getProductos (idURL) {    
         try{       
             return new Promise ((resolve) => {
@@ -18,7 +17,6 @@ function getProductos (idURL) {
                 alert("No hay productos para mostrar")
                 console.log(err)
             }
-    } 
-   
+    }   
 
 export default getProductos

@@ -21,7 +21,7 @@ function ItemCount ({initial, stock, onAdd}) {
             <button  className="symbolMenos" onClick= {restar} >-</button>
             <button  className="symbolMas" onClick= {sumar} >+</button>
             <h3>Cantidad: {clicks}</h3>
-            <button className="buttonVerMas" onClick={handleClicks}>Finalizar compra</button>            
+            <button className="buttonVerMas" onClick={handleClicks}>AGREGAR AL CARRITO</button>            
             </div>
         </>
     )

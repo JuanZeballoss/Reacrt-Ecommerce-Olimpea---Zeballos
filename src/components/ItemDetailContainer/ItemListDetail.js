@@ -4,12 +4,12 @@ import { setState, useState } from "react"
 import {useContext} from "react"
 import { cartContext } from "../Store/cartContext"
 
-function ItemListDetail ({title, category, outDate, img, principalActor, secondaryActor, duration, description, stock, id}){
+function ItemListDetail ({title, category, outDate, img, principalActor, secondaryActor, duration, description, stock, id, price}){
   const {addToCart} = useContext(cartContext)
   const [quantityInCart, setInCart] = useState(0)
 
   function handleClicks (quantity) {
-    const item = {title, category, outDate, img, principalActor, secondaryActor, duration, description, stock, id}
+    const item = {title, category, outDate, img, principalActor, secondaryActor, duration, description, stock, id, price}
     addToCart(item, quantity)
     setInCart(quantity)
   }
@@ -26,12 +26,19 @@ return (
         <h5 className="card-text">Duracion: {duration}</h5>
         <h5 className="card-text">Descipcion breve: {description}</h5>
         <h5 className="card-text">Stock: {stock}</h5>  
+        <h3 className="card-text">Precio: ${price}</h3>  
+        
         {quantityInCart === 0?      
         <div className="card-body">          
           <ItemCount initial={1} stock={stock} onAdd={handleClicks} />
         </div>
-        : <Link to={`/cart`}>Ver carrito</Link>
+        :
+        <div> 
+        <Link to={`/cart`} className="verCarritoo">VER CARRITO</Link>
+        <Link to="/" className="seguirComprando">SEGUIR COMPRANDO</Link>  
+        </div>        
         }
+        
       </div>
     </div>
   )

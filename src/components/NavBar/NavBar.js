@@ -2,19 +2,16 @@ import "./NavBar.css";
 import carritoImg from "../CartWidget/shopping-cart.svg";
 import CartWidget from "../CartWidget/CartWidget"
 import {Link} from "react-router-dom"
-import {useContext} from "react"
-import {cartContext} from "../Store/cartContext"
 
 function NavBar ()  {
-  const {cart} = (useContext(cartContext))
-
+  
     return(
         <>
         <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">Olimpea Ecommerce</Link>
           
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -23,15 +20,15 @@ function NavBar ()  {
                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Trabaja con nosotros</a>
+                <Link className="nav-link" to="/">Trabaja con nosotros</Link>
               </li>
               <li className="nav-item dropdown">
-                <Link className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <Link className="nav-link dropdown-toggle" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Productos
                 </Link>
                 <ul className="dropdown-menu">
-                  <li><Link className="dropdown-item" to="/detalle/1">Maquillaje</Link></li>
-                  <li><Link className="dropdown-item" to="/detalle/2">SkinCare</Link></li>
+                  <li><Link className="dropdown-item" to="/detalle/1">Peliculas</Link></li>
+                  <li><Link className="dropdown-item" to="/detalle/2">Series</Link></li>
                   <li><hr className="dropdown-divider"/></li>
                   <li><Link className="dropdown-item" to={`/category/Drama`}>Categoria Drama</Link></li>
                   <li><Link className="dropdown-item" to={`/category/Comedy`}>Categoria Comedy</Link></li>
@@ -41,7 +38,7 @@ function NavBar ()  {
             </ul>
             <p className="navbar-brand" ></p>
             <form className="d-flex" role="search">              
-            <Link to="/LogIn"  className="btn btn-outline-success" type="submit">Log In</Link>
+            {/* <Link to="/LogIn"  className="btn btn-outline-success" type="submit">Log In</Link> */}
               <CartWidget imgUrl={carritoImg} />
               
             </form>
