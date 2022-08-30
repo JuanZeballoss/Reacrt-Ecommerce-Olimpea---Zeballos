@@ -1,10 +1,6 @@
 import "./Item.css"
 import { Link } from "react-router-dom"
 
-function handleClicks (count) {
-  console.log("Agregar al carrito", count)
-}
-
 function Item({ img, title, category, id}) {
 
   return (

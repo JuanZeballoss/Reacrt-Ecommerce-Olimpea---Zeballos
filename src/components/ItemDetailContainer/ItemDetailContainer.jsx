@@ -1,14 +1,29 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail"
-import getProductos from "../Helpers/getProductos";
 import { useParams } from "react-router-dom"
+import firestoreDB from "../../services/fireBase"
+import { getDoc, collection, doc } from "firebase/firestore"
 
-function ItemDetailContainer () {
+function getProductosId(id) {
+  return new Promise((resolve, reject) => {
+    const idRef = collection(firestoreDB, "MakeUp")
+    const docRef = doc(idRef, id)
+    getDoc(docRef).then(snapshot => {
+      resolve(
+        { ...snapshot.data(), id: snapshot.id }
+      )
+    })
+  })
+}
+
+
+function ItemDetailContainer() {
+
   const idURL = useParams().id;
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    getProductos(idURL).then((respuesta) => {
+    getProductosId(idURL).then((respuesta) => {
       setData(respuesta);
     });
   }, [idURL]);

@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { cart, deleteCart, deleteProd, finalizarCompra } =
-    useContext(cartContext);
+    useContext(cartContext); 
 
   return (
     <div>
-      {cart.lenght === +0 ? (
+      {cart.lenght ===+ 0 ? (
         <div>
           <h2>No hay productos en el carrito</h2>
           <Link to="/">
@@ -48,12 +48,12 @@ const Cart = () => {
       <button onClick={deleteCart} className="clearCart">
         VACIAR CARRITO
       </button>
-      <Link to="/payment">
+      <Link to="/payment" style={{ color: 'inherit', textDecoration: 'inherit'}}>
         <button className="verCarrito" onClick={finalizarCompra}>
           FINALIZAR COMPRA
         </button>
       </Link>
-      <Link to="/">
+      <Link to="/" style={{ color: 'inherit', textDecoration: 'inherit'}}>
         <button className="seguirComprandoo">SEGUIR COMPRANDO</button>
       </Link>
     </div>
