@@ -24,6 +24,7 @@ import getProductos from "../Helpers/getProductos";
             {data.map((movie) => {
                 return (                    
                         <Item
+                            key={movie.id}
                             id={movie.id}                            
                             title={movie.title}                        
                             category={movie.category}                        

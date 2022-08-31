@@ -16,6 +16,7 @@ function ItemListDetail({
   stock,
   id,
   price,
+  
 }) {
   const { addToCart } = useContext(cartContext);
   const [quantityInCart, setInCart] = useState(0);
@@ -33,6 +34,7 @@ function ItemListDetail({
       stock,
       id,
       price,
+      
     };
     addToCart(item, quantity);
     setInCart(quantity);

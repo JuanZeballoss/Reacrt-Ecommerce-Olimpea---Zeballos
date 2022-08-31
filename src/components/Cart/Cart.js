@@ -5,11 +5,11 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { cart, deleteCart, deleteProd, finalizarCompra } =
+  const { cart, deleteCart, deleteProd } =
     useContext(cartContext); 
 
   return (
-    <div>
+    <div >
       {cart.lenght ===+ 0 ? (
         <div>
           <h2>No hay productos en el carrito</h2>
@@ -23,12 +23,12 @@ const Cart = () => {
           {cart.map((item) => {
             const valorTotal = item.price * item.quantity;
             return (
-              <div className="card">
+              <div className="card" key={item.id}>
                 <img src={item.img} className="card-img-top" alt="" />
                 <div className="card-body">
                   <h5 className="card-title">{item.title}</h5>
                   <h5 className="card-title">Categoria: {item.category}</h5>
-                  <h5 className="card-title">Cantidad: {item.quantity}</h5>
+                  <h5 className="card-title">Cantidad: {item.quantity}</h5>    
                   <FontAwesomeIcon
                     icon={faTrash}
                     className="trashCan"
@@ -48,14 +48,15 @@ const Cart = () => {
       <button onClick={deleteCart} className="clearCart">
         VACIAR CARRITO
       </button>
-      <Link to="/payment" style={{ color: 'inherit', textDecoration: 'inherit'}}>
-        <button className="verCarrito" onClick={finalizarCompra}>
+      <Link to="/Payment" style={{ color: 'inherit', textDecoration: 'inherit'}}>
+        <button className="verCarrito" >
           FINALIZAR COMPRA
         </button>
       </Link>
       <Link to="/" style={{ color: 'inherit', textDecoration: 'inherit'}}>
         <button className="seguirComprandoo">SEGUIR COMPRANDO</button>
       </Link>
+      
     </div>
   );
 };
