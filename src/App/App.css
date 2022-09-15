@@ -13,8 +13,6 @@
   }
 }
 
-
-
 .App-header {
   background-color: rgb(198, 198, 198);
   min-height: 100vh;
@@ -52,6 +50,11 @@
   font-size: 24px;
 }
 
+#botonMas{
+  position: absolute;
+  margin-left: 250px;
+}
+
 .text:hover{  
   transform: scale(120%);
   transition: 0.5s;
@@ -59,40 +62,12 @@
 
 }
 
-.symbolMas {
-  background-color: rgb(198, 198, 198);
-  position: absolute;
-  display: flex;
-  border-radius: 5px;
-  font-size: 25px;
+.tittlePage{
   text-align: center;
-  width: 10%;
-  right: 20px;
-  justify-content: center;
+  margin-top: 20px;
+  
 }
 
-.symbolMenos {
-  background-color: rgb(198, 198, 198);
-  position: absolute;
-  left: 20px;
-  display: flex;
-  justify-content: center;  
-  border-radius: 5px;
-  font-size: 25px;
-  width: 10%;
-}
-
-.symbolMas:hover{
-  color: white;
-  background-color: rgb(108, 139, 60);
-  transition: 0.5s;
-}
-
-.symbolMenos:hover{
-  color: white;
-  background-color: rgb(139, 60, 60);
-  transition: 0.5s;
-}
 
 .buttonVerMas {
   text-decoration: none;
@@ -227,3 +202,4 @@
   transition: 0.5s;  
   color: black;
 }
+

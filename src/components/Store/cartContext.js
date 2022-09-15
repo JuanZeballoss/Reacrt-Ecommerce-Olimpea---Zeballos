@@ -46,8 +46,7 @@ export function CartProvider ({children}) {
     function MySwal () {
         const MySwal = withReactContent(Swal)                     
             MySwal.fire({
-            title: <strong>Muchas gracias por comprar con nosotros!</strong>,
-            html: <i>Vuelve pronto</i>,
+            title: <strong>Tu compra se realizo con exito</strong>,
             icon: 'success'
             })}
    

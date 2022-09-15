@@ -41,11 +41,11 @@ function ItemListDetail({
   }
 
   return (
-    <div className="card">
+    <div className="card position-relative my-5 top-0 start-50 translate-middle-x w-50">      
       <img src={img} className="card-img-top" alt="" />
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
-        <h6 className="card-text">Categoria: {category}</h6>
+        <h6 className="card-text ">Categoria: {category}</h6>
         <h5 className="card-text">Fecha de lanzamiento: {outDate}</h5>
         <h5 className="card-text">Protragonista :{principalActor}</h5>
         <h5 className="card-text">Secundario: {secondaryActor}</h5>
@@ -54,20 +54,20 @@ function ItemListDetail({
         <h5 className="card-text">Stock: {stock}</h5>
         <h3 className="card-text">Precio: ${price}</h3>
         {quantityInCart === 0 ? (
-          <div className="card-body">
+          <div>
             <ItemCount initial={1} stock={stock} onAdd={handleClicks} />
           </div>
         ) : (
           <div>
-            <Link to={`/cart`} className="verCarritoo">
+            <Link to={`/cart`} className="btn btn-primary mt-2 fs-5 d-grid gap-2 col-6 mx-auto my-4">
               VER CARRITO
             </Link>
-            <Link to="/" className="seguirComprando">
+            <Link to="/" className="btn btn-success mt-2 fs-5 d-grid gap-2 col-6 mx-auto my-4">
               SEGUIR COMPRANDO
             </Link>
           </div>
         )}
-      </div>
+      </div>      
     </div>
   );
 }

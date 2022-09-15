@@ -30,7 +30,6 @@ function ItemDetailContainer() {
 
   return (
     <div>
-      <h2>Este es nuestro producto mas vendido</h2>
       <ItemDetail item={data} />
     </div>
   )

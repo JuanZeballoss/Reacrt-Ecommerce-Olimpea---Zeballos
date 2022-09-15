@@ -9,14 +9,14 @@ import Payment from "../components/payment/payment";
 
 function App() {
     return (
-        <>
+        <div className="background">          
             <div>
                 <BrowserRouter>
                     <CartProvider >
                         <NavBar />
                             <Routes>    
                                 <Route path="/" element={<ItemListContainer />}/>                            
-                                <Route path="/detalle/:id" element={<ItemDetailContainer />}/>
+                                <Route path="/:id" element={<ItemDetailContainer />}/>
                                 <Route path="/category/:idCategory" element={<ItemListContainer />}/>
                                 <Route path="/cart" element={<Cart />}/>
                                 <Route path="/payment" element={<Payment />}/>
@@ -24,7 +24,7 @@ function App() {
                     </CartProvider>                     
                 </BrowserRouter>
             </div>
-        </>
+        </div>
     )
 }
 export default App;

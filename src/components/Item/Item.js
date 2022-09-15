@@ -12,7 +12,7 @@ function Item({ img, title, category, id}) {
       </div>     
       
       <div className="card-body">
-        <Link to={`detalle/${id}`} className="buttonVerMas" >MAS INFORMACION</Link>
+        <Link to={`/${id}`} className="btn btn-primary" >MAS INFORMACION</Link>
       </div>      
     </div>)
 }

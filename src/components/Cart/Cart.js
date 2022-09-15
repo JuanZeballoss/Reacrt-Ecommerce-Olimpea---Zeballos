@@ -10,16 +10,16 @@ const Cart = () => {
 
   return (
     <div >
-      {cart.lenght ===+ 0 ? (
+      {cart.length ===+ 0 ? (
         <div>
-          <h2>No hay productos en el carrito</h2>
-          <Link to="/">
-            <button className="seguirComprandoo">SEGUIR COMPRANDO</button>
+          <h2 className="tittlePage">NO HAY PRODUCTOS EN EL CARRITO</h2>
+          <Link to="/" className="text-decoration-none">
+            <button className="btn btn-secondary d-grid gap-2 col-6 mx-auto my-4">VOLVER AL MENU A REALIZAR UN COMPRA</button>
           </Link>
         </div>
       ) : (
         <div>
-          <h2>Carrito</h2>
+          <h2 className="tittlePage">Carrito</h2>
           {cart.map((item) => {
             const valorTotal = item.price * item.quantity;
             return (
@@ -39,23 +39,25 @@ const Cart = () => {
               </div>
             );
           })}
-        </div>
-      )}
-      <h2>
+          <h2 className="tittlePage">
         TOTAL CARRITO: $
         {cart.reduce((total, item) => total + item.price * item.quantity, 0)}
       </h2>
-      <button onClick={deleteCart} className="clearCart">
+      <button onClick={deleteCart} className="btn btn-danger d-grid gap-2 col-6 mx-auto my-4 ">
         VACIAR CARRITO
       </button>
       <Link to="/Payment" style={{ color: 'inherit', textDecoration: 'inherit'}}>
-        <button className="verCarrito" >
+        <button className="btn btn-success d-grid gap-2 col-6 mx-auto" >
           FINALIZAR COMPRA
         </button>
       </Link>
       <Link to="/" style={{ color: 'inherit', textDecoration: 'inherit'}}>
-        <button className="seguirComprandoo">SEGUIR COMPRANDO</button>
+        <button className="btn btn-primary d-grid gap-2 col-6 mx-auto my-4">SEGUIR COMPRANDO</button>
       </Link>
+        </div>
+        
+      )}
+      
       
     </div>
   );

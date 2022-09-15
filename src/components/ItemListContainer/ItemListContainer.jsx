@@ -4,7 +4,8 @@ function ItemListContainer  () {
   
   return (   
       <div>
-      <h1>NUESTROS PRODUCTOS</h1>
+        
+      <h2 className="tittlePage">ENCONTRA TUS PELICULAS FAVORITAS AQUI</h2>
       <ItemList />      
       </div>
   );
